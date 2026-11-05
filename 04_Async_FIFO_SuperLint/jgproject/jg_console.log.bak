@@ -1,0 +1,58 @@
+2026-09-30 10:06:27.704583 (31517) main____ INFO    ----------------------------------------
+2026-09-30 10:06:27.704707 (31517) main____ INFO    JasperGold version info
+2026-09-30 10:06:27.704728 (31517) main____ INFO      tool      : JasperGold 2019.09
+2026-09-30 10:06:27.704740 (31517) main____ INFO      version   : 2019.09p002 64 bits
+2026-09-30 10:06:27.704748 (31517) main____ INFO      build date: 2019.11.26 18:17:27 PST
+2026-09-30 10:06:27.704755 (31517) main____ INFO    ----------------------------------------
+2026-09-30 10:06:27.704762 (31517) main____ INFO    Runtime info:
+2026-09-30 10:06:27.704770 (31517) main____ INFO      platform  : Linux 3.10.0-1160.119.1.el7.x86_64 x86_64
+2026-09-30 10:06:27.704780 (31517) main____ INFO      hostname  : nsdcs.iiti.ac.in
+2026-09-30 10:06:27.704787 (31517) main____ INFO      pid       : 31517
+2026-09-30 10:06:27.704794 (31517) main____ INFO      arguments : '-style' 'windows' '-superlint'
+2026-09-30 10:06:27.704801 (31517) main____ INFO    ----------------------------------------
+2026-09-30 10:06:27.704807 (31517) main____ INFO    System resource limits info:
+2026-09-30 10:06:27.704814 (31517) main____ INFO      virtual memory: unlimited
+2026-09-30 10:06:27.704821 (31517) main____ INFO      cpu time      : unlimited
+2026-09-30 10:06:27.704839 (31517) main____ INFO      stack size    : 8388608 B
+2026-09-30 10:06:27.704850 (31517) main____ INFO      core file size: 0 B
+2026-09-30 10:06:27.704864 (31517) main____ INFO      open files    : 1024
+2026-09-30 10:06:27.704872 (31517) main____ INFO      file size     : unlimited
+2026-09-30 10:06:27.704878 (31517) main____ INFO    ----------------------------------------
+2026-09-30 10:06:27.704884 (31517) main____ INFO    Memory statistics:
+2026-09-30 10:06:27.704891 (31517) main____ INFO      total physical memory  : 131759196 kB
+2026-09-30 10:06:27.704897 (31517) main____ INFO      free physical memory   : 93391652 kB
+2026-09-30 10:06:27.704903 (31517) main____ INFO      committed address space: 57285388 kB
+2026-09-30 10:06:27.704909 (31517) main____ INFO    ----------------------------------------
+2026-09-30 10:06:27.704946 (31517) main____ INFO    Important environment variables:
+2026-09-30 10:06:27.704961 (31517) main____ INFO      CDS_LIC_FILE   : '5280@14.139.1.126'
+2026-09-30 10:06:27.704971 (31517) main____ INFO      DISPLAY        : ':16.0'
+2026-09-30 10:06:27.704980 (31517) main____ INFO      EDITOR         : 'gedit'
+2026-09-30 10:06:27.704988 (31517) main____ INFO      LM_LICENSE_FILE: '5280@14.139.1.126'
+2026-09-30 10:06:27.704994 (31517) main____ INFO    ----------------------------------------
+2026-09-30 10:06:27.705718 (31517) lic_core INFO    Initializing license system ...
+2026-09-30 10:06:27.706295 (31517) lic_core INFO    ... license system initialized.
+2026-09-30 10:06:27.707949 (31517) lic__man INFO    Claim 'main' for <ui>.
+2026-09-30 10:06:27.708007 (31517) lic_core INFO    (1) checking out 'jasper_interactive' ...
+2026-09-30 10:06:28.481891 (31517) lic_core INFO    ... (1) checkout succeeded
+2026-09-30 10:06:28.482076 (31517) lic__man INFO    Claim 'superlint' for <ui>.
+2026-09-30 10:06:28.482124 (31517) lic_core INFO    (2) checking out 'jasper_afl' ...
+2026-09-30 10:06:30.561748 (31517) lic_core INFO    ... (2) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
+2026-09-30 10:06:30.561846 (31517) lic_core INFO    (3) checking out 'jasper_dao' ...
+2026-09-30 10:06:31.329226 (31517) lic_core INFO    ... (3) checkout succeeded
+2026-09-30 10:06:32.023885 (31517) lic__man INFO    Claim 'superlint' for <ui>.
+2026-09-30 10:06:32.270082 (31517) lic__man INFO    Unclaim 'superlint' for <ui>.
+2026-09-30 10:06:32.270193 (31517) lic__man INFO    Claim 'superlint' for <ui>.
+2026-09-30 10:06:32.282637 (31517) session_ INFO    Starting analysis session with session id 'session_0' (launcher: <local>) ...
+2026-09-30 10:06:32.284702 (31517) session_ INFO    Analysis session with session id 'session_0' started (pid: 31545)
+2026-09-30 10:06:36.090999 (31517) session_ INFO    Analysis session 'session_0' connected to the console (host: 127.0.0.1:57244)
+2026-09-30 10:09:06.735034 (31517) lic__man INFO    Unclaim everything for 'session_0'.
+2026-09-30 10:12:25.378028 (31517) lic__man INFO    Unclaim everything for 'session_0'.
+2026-09-30 10:25:10.497647 (31517) lic__man INFO    Claim 'superlint' for 'session_0'.
+2026-09-30 10:25:10.700003 (31517) lic__man INFO    Unclaim everything for 'session_0/prove-0'.
+2026-09-30 10:33:16.941200 (31517) lic__man INFO    Entering idle state.
+2026-09-30 10:33:29.562059 (31517) lic__man INFO    Leaving idle state.
+2026-09-30 10:41:29.562223 (31517) lic__man INFO    Entering idle state.
+2026-09-30 11:02:41.045954 (31517) lic__man INFO    Leaving idle state.
+2026-09-30 11:19:39.718185 (31517) main____ INFO    About to exit: request to exit with status 0 received from analysis session 'session_0'
+2026-09-30 11:19:40.185760 (31517) session_ INFO    Analysis session 'session_0' disconnected.
+2026-09-30 11:19:40.194547 (31517) main____ INFO    Exiting with status 0.

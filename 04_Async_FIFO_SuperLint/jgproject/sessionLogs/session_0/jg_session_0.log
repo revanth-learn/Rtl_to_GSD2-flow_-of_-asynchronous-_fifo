@@ -1,0 +1,72 @@
+#----------------------------------------
+# JasperGold Version Info
+# tool      : JasperGold 2019.09
+# platform  : Linux 3.10.0-1160.119.1.el7.x86_64
+# version   : 2019.09p002 64 bits
+# build date: 2019.11.26 18:17:27 PST
+#----------------------------------------
+# started Wed Sep 30 11:34:46 IST 2026
+# hostname  : nsdcs.iiti.ac.in
+# pid       : 8897
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:44700' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/jgproject/.tmp/.initCmds.tcl' 'script_lint.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2019 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc. 
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+JasperGold Apps Analysis Session - /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/jgproject/sessionLogs/session_0
+
+/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/jgproject/jg.log
+INFO: successfully checked out licenses "jasper_interactive" and "jasper_dao".
+INFO: reading configuration file "/home/Revanth_BTP/.config/jasper/jaspergold.conf".
+% check_superlint -init
+INFO (INL204): Disabling pipeline elaboration since it is not supported in Superlint App.
+% analyze -verilog {../01_Async_FIFO_src/fifo_empty.v} ;
+[-- (VERI-1482)] Analyzing Verilog file '../01_Async_FIFO_src/fifo_empty.v'
+% analyze -verilog {../01_Async_FIFO_src/fifo_full.v} ;
+[-- (VERI-1482)] Analyzing Verilog file '../01_Async_FIFO_src/fifo_full.v'
+% analyze -verilog {../01_Async_FIFO_src/fifo_mem.v} ;
+[-- (VERI-1482)] Analyzing Verilog file '../01_Async_FIFO_src/fifo_mem.v'
+% analyze -verilog {../01_Async_FIFO_src/fifo.v} ;
+[-- (VERI-1482)] Analyzing Verilog file '../01_Async_FIFO_src/fifo.v'
+% analyze -verilog {../01_Async_FIFO_src/reset_sync.v} ;
+[-- (VERI-1482)] Analyzing Verilog file '../01_Async_FIFO_src/reset_sync.v'
+% analyze -verilog {../01_Async_FIFO_src/sync_ptr_clx.v};
+[-- (VERI-1482)] Analyzing Verilog file '../01_Async_FIFO_src/sync_ptr_clx.v'
+% elaborate -top {fifo} -parameter {DATASIZE} {8} -parameter {ADDRSIZE} {4} -parameter {MEM_DEPTH}
+ERROR (ESW090): No argument to switch "-parameter".
+
+ERROR: problem encountered at line 7 in file script_lint.tcl
+
+INFO (IPL005): Received request to exit from the console.
+INFO: Waiting for proof threads to stop...
+INFO: Proof threads stopped.

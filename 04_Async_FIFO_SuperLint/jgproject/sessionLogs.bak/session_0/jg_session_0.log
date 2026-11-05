@@ -1,0 +1,176 @@
+#----------------------------------------
+# JasperGold Version Info
+# tool      : JasperGold 2019.09
+# platform  : Linux 3.10.0-1160.119.1.el7.x86_64
+# version   : 2019.09p002 64 bits
+# build date: 2019.11.26 18:17:27 PST
+#----------------------------------------
+# started Wed Sep 30 10:06:32 IST 2026
+# hostname  : nsdcs.iiti.ac.in
+# pid       : 31545
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:42179' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/jgproject/.tmp/.initCmds.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2019 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc. 
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+JasperGold Apps Analysis Session - /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/jgproject/sessionLogs/session_0
+
+/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/jgproject/jg.log
+INFO: successfully checked out licenses "jasper_interactive" and "jasper_dao".
+INFO: reading configuration file "/home/Revanth_BTP/.config/jasper/jaspergold.conf".
+% check_superlint -init
+INFO (INL204): Disabling pipeline elaboration since it is not supported in Superlint App.
+% analyze -verilog {/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_empty.v} ; analyze -verilog {/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_full.v} ; analyze -verilog {/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v} ; analyze -verilog {/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo.v} ; analyze -verilog {/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/reset_sync.v} ; analyze -verilog {/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/sync_ptr_clx.v} ; 
+[-- (VERI-1482)] Analyzing Verilog file '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_empty.v'
+[-- (VERI-1482)] Analyzing Verilog file '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_full.v'
+[-- (VERI-1482)] Analyzing Verilog file '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v'
+[-- (VERI-1482)] Analyzing Verilog file '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo.v'
+[-- (VERI-1482)] Analyzing Verilog file '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/reset_sync.v'
+[-- (VERI-1482)] Analyzing Verilog file '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/sync_ptr_clx.v'
+% clear -all
+INFO (IPF121): Cleared environment completely for new design analysis.
+% set_elaborate_single_run_mode off
+% analyze -verilog {/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_empty.v} ; analyze -verilog {/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_full.v} ; analyze -verilog {/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v} ; analyze -verilog {/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo.v} ; analyze -verilog {/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/reset_sync.v} ; analyze -verilog {/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/sync_ptr_clx.v} ; 
+[-- (VERI-1482)] Analyzing Verilog file '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_empty.v'
+[-- (VERI-1482)] Analyzing Verilog file '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_full.v'
+[-- (VERI-1482)] Analyzing Verilog file '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v'
+[-- (VERI-1482)] Analyzing Verilog file '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo.v'
+[-- (VERI-1482)] Analyzing Verilog file '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/reset_sync.v'
+[-- (VERI-1482)] Analyzing Verilog file '/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/sync_ptr_clx.v'
+% elaborate -parameter {DATASIZE} {8} -parameter {ADDRSIZE} {4} -parameter {MEM_DEPTH} {16} -top {fifo}
+INFO (ISW003): Top module name is "fifo".
+[INFO (HIER-8002)] /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo.v(149): Disabling old hierarchical reference handler
+[INFO (VERI-1018)] /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo.v(44): compiling module 'fifo'
+[INFO (VERI-1018)] /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/reset_sync.v(23): compiling module 'reset_sync'
+[INFO (VERI-1018)] /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/sync_ptr_clx.v(23): compiling module 'sync_ptr_clx'
+[INFO (VERI-1018)] /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v(30): compiling module 'fifo_mem'
+[INFO (VERI-1018)] /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_empty.v(38): compiling module 'fifo_empty'
+[INFO (VERI-1018)] /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_full.v(37): compiling module 'fifo_full'
+fifo
+[<embedded>] % get_clock_info -gui
+[<embedded>] % clock i_wr_clk {i_wr_clk} 1 1
+[<embedded>] % clock i_rd_clk {i_rd_clk} 1 1
+[<embedded>] % reset -expression {!(i_wr_rst_n)} {!(i_rd_rst_n)};
+INFO (IPM031): Clearing proof results of all properties.
+INFO (IRS006): Current reset condition is "i_wr_rst_n i_rd_rst_n".
+[<embedded>] % config_rtlds -rule  -enable -category {CONNECTIVITY BLACKBOX NAMING FILEFORMAT CODINGSTYLE SIM_SYNTH SYNTHESIS STRUCTURAL RACES} 
+WARNING (WSL003): You have enabled one or more checks that must be specified before elaboration.
+    Run "elaborate" before you run "check_superlint -extract".
+    The enabled checks are: LOP_NR_GLID,LOP_NR_INFL,LOP_NR_SRLG,MOD_IS_RCMP,MOD_NR_ALAS,MOD_NR_CNDO,MOD_NR_DSBC,MOD_NR_EVRP,MOD_NR_FINB,MOD_NR_FKJN,MOD_NR_FORE,MOD_NR_FREL,MOD_NR_IFSM,MOD_NR_INIB,MOD_NR_NSLP,MOD_NR_USWC,MOD_NS_ADAS,MOD_NS_DCSP,MOD_NS_GTIN,OPR_NR_WCCO,RST_NR_ASRO,SIG_NO_HIER,SIG_NR_MDRV,SIG_NR_TIME,TSK_NR_CLKE,VAR_NO_COMR,VAR_NR_MNBA,VAR_NR_OUTR,VAR_NR_REAL,ELB_IS_ERRO,BLK_NF_NMCV,FNC_NF_NMCV,IDN_NF_ALCA,IDN_NF_FCNL,IDN_NF_NMCV,IDN_NR_ESCA,INS_NF_NMCV,INT_NF_NMCV,MOD_NF_NMCV,PAR_NF_NMCV,REA_NF_NMCV,REG_NF_NMCV,SIG_NF_NMCV,SIG_NF_NMLN,TSK_NF_NMCV,WIR_NF_NMCV,FIL_MS_DUNM,FIL_NF_NMCV,FIL_NR_MMOD,FIL_NS_SUFX,ALW_IS_TASK,ALW_NR_OPSL,ARC_NR_GLSG,ARC_NR_UDAT,ARY_MS_DRNG,ARY_NR_LBND,ARY_NR_LOPR,ARY_NR_SLRG,ASG_MS_RPAD,ASG_MS_RTRU,ASG_NR_LMSB,ASG_NR_MINP,ASG_NR_NBFC,ASG_NS_TRNB,CAS_NO_CNST,CAS_NO_DEFA,CAS_NR_CMUL,CAS_NR_DEFA,CAS_NR_DEFN,CAS_NR_DEFX,CAS_NR_EXCS,CAS_NR_FCDF,CAS_NR_OVCI,CAS_NR_UCIT,CAS_NR_XCAZ,CND_IR_CCAS,CND_NS_MBEX,CST_MS_LPDZ,CST_MS_SIZE,CST_NO_DELY,DLY_NO_CSAG,DLY_NR_NEGT,ENT_NR_DECL,EXP_NR_ITYC,EXP_NR_OVFB,FIL_NR_MTMS,FNC_MS_AFPR,FNC_MS_MTYP,FNC_NO_AVAC,FNC_NO_UASG,FNC_NO_USED,FNC_NR_AVGV,FNC_NR_NARG,FNC_NR_RETV,FNC_NR_UGLV,IDN_NR_AMKW,IDN_NR_CKYW,IDN_NR_SVKW,IDN_NR_VHKW,IDN_NR_VKYW,IDX_MS_INDL,IDX_NR_DTTY,IFC_NO_FALW,IFC_NR_DGEL,INP_NO_USED,INS_MS_PRMS,INS_MS_PSIZ,INS_NR_PODL,INS_NR_PTEX,INT_NR_PSBT,IOP_NO_USED,IOP_NR_UASG,IOP_NR_UNRD,LOP_NR_CTCE,LOP_NR_FCND,LOP_NR_IDTY,LOP_NR_MLPV,LOP_NR_MSTP,LOP_NR_RPVR,MAC_NR_DMUL,MOD_NO_PRTD,MOD_NO_TMSL,MOD_NR_ALLD,MOD_NR_CASX,MOD_NR_CASZ,MOD_NR_PGAT,MOD_NR_PLIF,MOD_NR_PRIM,MOD_NR_SYTS,MOD_NR_UNGN,NAM_NR_REPU,OPR_NR_LOSD,OPR_NR_REAL,OPR_NR_TRNB,OPR_NR_UCMP,OPR_NR_UEOP,OPR_NR_UEAS,OPR_NR_TERN,OPR_NR_UREL,OTP_NO_USED,OTP_NR_TSUP,PAR_MS_SDAS,PRG_NO_EXPT,PRG_NR_PROF,PRO_NR_WAIT,PRT_NR_DFRG,PRT_NR_IOPT,REG_NO_READ,REG_NO_USED,REG_NR_MBNT,REG_NR_UASR,RST_IS_CPLX,SEQ_NR_BLKA,SIG_NO_ASIG,SIG_NO_READ,SIG_NO_USED,SIG_NR_IDRG,SIG_NR_INDL,TSK_NO_USED,TSK_NR_ASGV,TSK_NR_ESDE,TSK_NR_UGLV,VAR_NO_ASIG,VAR_NO_EVTR,VAR_NO_INTL,VAR_NO_READ,VAR_NO_USED,VAR_NR_PRCD,VAR_NR_RDBA,VAR_NR_UBDL,WIR_NO_READ,WIR_NO_USED,WIR_NR_UASR,ALW_NR_MSLV,ALW_NR_UNUV,CST_NO_BWID,CST_NR_MSBX,CST_NR_MSBZ,DLY_NR_XZVL,MOD_NR_SYXZ,VAR_NR_NDCL,ALW_IC_SENL,ALW_NO_COMB,ALW_NO_ETRG,ALW_NO_EVTS,ALW_NO_FFLP,ALW_NO_LATH,ALW_NR_MCLK,ALW_NR_MXCK,ALW_NR_TCST,ASG_NR_NBCB,ASG_NR_SUPN,CAS_NR_EVLX,CLK_IS_NSYT,CND_NR_CMXZ,DLY_NR_ASGN,FLP_NR_ASMX,FLP_NR_INDL,FLP_NR_MBCK,FNC_NR_CREC,IDX_NR_LBOU,IDX_NR_ORNG,INP_NR_ASGN,LAT_NR_BLAS
+    For message help, type "help -message WSL003"
+[<embedded>] % config_rtlds -rule  -disable -category {AUTO_FORMAL_ARITHMETIC_OVERFLOW AUTO_FORMAL_BUS AUTO_FORMAL_CASE AUTO_FORMAL_DEAD_CODE AUTO_FORMAL_OUT_OF_BOUND_INDEXING} 
+[<embedded>] % check_superlint -extract  -task  . 
+INFO (ISL018): Started extraction of structural checks
+INFO (ISL018): Started building clock tree
+INFO (ISL018): Finished building clock tree
+INFO (ISL018): Started building reset tree
+INFO (ISL018): Finished building reset tree
+INFO (ISL018): Violation Count: Errors = 0 Warnings = 18 Info = 2
+20
+[<embedded>] % check_superlint -prove -task { . } -bg
+background 0
+[<embedded>] % check_superlint -show_schematic -constants_values 11
+WARNING (WG002): "check_superlint -show_schematic" is included as an initial release to gather feedback from early adopters and finalize implementation for an upcoming release.
+[<embedded>] % check_superlint -show_schematic -constants_values 10
+WARNING (WG002): "check_superlint -show_schematic" is included as an initial release to gather feedback from early adopters and finalize implementation for an upcoming release.
+[<embedded>] % check_superlint -show_schematic -constants_values 10
+WARNING (WG002): "check_superlint -show_schematic" is included as an initial release to gather feedback from early adopters and finalize implementation for an upcoming release.
+[<embedded>] % check_superlint -waiver -add -source_file /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v -start_line 52 -end_line 52 -instance u_fifo_mem -tag INS_NR_INPR -message {"Input port 'u_fifo_mem.i_full' of instance 'u_fifo_mem' is not a register"} -comment {Input Port cannot be registered} -force
+(1) ( POIType=*  Category=*  Tag=INS_NR_INPR  Module=*  Instance=u_fifo_mem  SourceLocation=/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v 52 52 * *  Message="Input port 'u_fifo_mem.i_full' of instance 'u_fifo_mem' is not a register"  Expression=*  Hierarchy=*  Arguments=* )
+1
+[<embedded>] % check_superlint -waiver -add -source_file /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/sync_ptr_clx.v -start_line 50 -end_line 59 -instance u_sync_rd2wr_clx -tag CLK_IS_MCDM -message {"Clock domain crossing is occurring between nets: 'u_sync_rd2wr_clx.ptr_clx_r' and 'u_fifo_empty.o_rd_ptr', perform CDC verification for more details"} -comment {Intentional CDC crossing.pointer signal is syncronized through syncroniser} -force
+(2) ( POIType=*  Category=*  Tag=CLK_IS_MCDM  Module=*  Instance=u_sync_rd2wr_clx  SourceLocation=/home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/sync_ptr_clx.v 50 59 * *  Message="Clock domain crossing is occurring between nets: 'u_sync_rd2wr_clx.ptr_clx_r' and 'u_fifo_empty.o_rd_ptr', perform CDC verification for more details"  Expression=*  Hierarchy=*  Arguments=* )
+2
+[<embedded>] % check_superlint -waiver -export -file_name /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/fifo_waiver_lint.tcl 
+1
+[<embedded>] % check_superlint -report -violation -order category -file /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/fifo_lint_report.txt -force -detailed
+[<embedded>] % check_superlint -report -violation -order category -detailed
+========================
+  VIOLATIONS SUMMARY  
+========================
+
+Domain: LINT        
+  Total             :19
+  Error             :0
+  Warning           :16
+  Info              :1
+  Waived            :2
+
+  Category          :CODINGSTYLE
+    Total           :1
+    Error           :0
+    Warning         :1
+    Info            :0
+    Waived          :0
+
+  Category          :STRUCTURAL
+    Total           :18
+    Error           :0
+    Warning         :15
+    Info            :1
+    Waived          :2
+
+---[ <CODINGSTYLE> ]----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Num  | Severity | Tag         | Message                                                         | Source Location                                                                                      | Instance-Module     | Grouping Status 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[1]     Warning    OTP_NR_ASYA   "Output port 'u_fifo_mem.o_rd_data' is assigned asynchronously"   /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v :55    u_fifo_mem-fifo_mem   -               
+
+---[ <STRUCTURAL> ]---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Num  | Severity                                                                            | Tag         | Message                                                                                                                                                                                                  | Source Location                                                                                          | Instance-Module               | Grouping Status 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[1]     Waived (Input Port cannot be registered)                                              INS_NR_INPR   "Input port 'u_fifo_mem.i_full' of instance 'u_fifo_mem' is not a register"                                                                                                                                /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v :52        u_fifo_mem-fifo_mem             -               
+[2]     Warning                                                                               INS_NR_INPR   "Input port 'u_fifo_mem.i_rd_addr' of instance 'u_fifo_mem' is not a register"                                                                                                                             /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v :51        u_fifo_mem-fifo_mem             -               
+[3]     Warning                                                                               INS_NR_INPR   "Input port 'u_fifo_mem.i_wr_addr' of instance 'u_fifo_mem' is not a register"                                                                                                                             /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v :50        u_fifo_mem-fifo_mem             -               
+[4]     Warning                                                                               INS_NR_INPR   "Input port 'u_fifo_mem.i_wr_data' of instance 'u_fifo_mem' is not a register"                                                                                                                             /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v :46        u_fifo_mem-fifo_mem             -               
+[5]     Warning                                                                               INS_NR_INPR   "Input port 'u_fifo_mem.i_wr_en' of instance 'u_fifo_mem' is not a register"                                                                                                                               /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v :49        u_fifo_mem-fifo_mem             -               
+[6]     Warning                                                                               INS_NR_INPR   "Input port 'u_fifo_empty.i_rd_en' of instance 'u_fifo_empty' is not a register"                                                                                                                           /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_empty.v :53      u_fifo_empty-fifo_empty         -               
+[7]     Warning                                                                               INS_NR_INPR   "Input port 'u_fifo_empty.i_wr_ptr_clx' of instance 'u_fifo_empty' is not a register"                                                                                                                      /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_empty.v :54      u_fifo_empty-fifo_empty         -               
+[8]     Warning                                                                               INS_NR_INPR   "Input port 'u_fifo_full.i_rd_ptr_clx' of instance 'u_fifo_full' is not a register"                                                                                                                        /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_full.v :53       u_fifo_full-fifo_full           -               
+[9]     Warning                                                                               INS_NR_INPR   "Input port 'u_fifo_full.i_wr_en' of instance 'u_fifo_full' is not a register"                                                                                                                             /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_full.v :52       u_fifo_full-fifo_full           -               
+[10]    Warning                                                                               MOD_IS_SYAS   "The design-unit 'fifo_empty' contains synchronous as well as asynchronous logic. Asynchronous logic is present at 'u_fifo_empty.rd_gray_next_s[4]' and Synchronous logic at 'u_fifo_empty.rd_bin_r[4]'"   /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_empty.v :63      u_fifo_empty-fifo_empty         -               
+[11]    Warning                                                                               MOD_IS_SYAS   "The design-unit 'fifo_full' contains synchronous as well as asynchronous logic. Asynchronous logic is present at 'u_fifo_full.wr_gray_next_s[4]' and Synchronous logic at 'u_fifo_full.wr_bin_r[4]'"      /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_full.v :62       u_fifo_full-fifo_full           -               
+[12]    Warning                                                                               MOD_IS_SYAS   "The design-unit 'fifo_mem' contains synchronous as well as asynchronous logic. Asynchronous logic is present at 'u_fifo_mem.wr_en_r' and Synchronous logic at 'u_fifo_mem.mem[0][7]'"                     /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo_mem.v :61        u_fifo_mem-fifo_mem             -               
+[13]    Warning                                                                               MOD_NO_IPRG   "Input port 'i_rd_en' of top-level design-unit is not registered"                                                                                                                                          /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo.v :68            fifo-fifo                       -               
+[14]    Warning                                                                               MOD_NO_IPRG   "Input port 'i_wr_data' of top-level design-unit is not registered"                                                                                                                                        /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo.v :62            fifo-fifo                       -               
+[15]    Warning                                                                               MOD_NO_IPRG   "Input port 'i_wr_en' of top-level design-unit is not registered"                                                                                                                                          /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/fifo.v :65            fifo-fifo                       -               
+[16]    Warning                                                                               RST_IS_DFLP   "Net 'u_wr_reset_sync.o_sync_rst' generated from flip-flop is driving reset of one or more flip-flops. One such flip-flop is 'u_sync_rd2wr_clx.o_ptr_clx[0]'"                                              /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/reset_sync.v :43      u_sync_rd2wr_clx-sync_ptr_clx   Grouped         
+[17]    Waived (Intentional CDC crossing.pointer signal is syncronized through syncroniser)   CLK_IS_MCDM   "Clock domain crossing is occurring between nets: 'u_sync_rd2wr_clx.ptr_clx_r' and 'u_fifo_empty.o_rd_ptr', perform CDC verification for more details"                                                     /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/sync_ptr_clx.v :50    u_sync_rd2wr_clx-sync_ptr_clx   -               
+[18]    Info                                                                                  CLK_IS_MCDM   "Clock domain crossing is occurring between nets: 'u_sync_wr2rd_clx.ptr_clx_r' and 'u_fifo_full.o_wr_ptr', perform CDC verification for more details"                                                      /home/Revanth_BTP/Desktop/ChipIN_RefDesign/04_Async_FIFO_SuperLint/01_Async_FIFO_src/sync_ptr_clx.v :50    u_sync_wr2rd_clx-sync_ptr_clx   -               
+
+
+[<embedded>] % exit
+INFO (IPL005): Received request to exit from the console.
+INFO: Waiting for proof threads to stop...
+INFO: Proof threads stopped.
