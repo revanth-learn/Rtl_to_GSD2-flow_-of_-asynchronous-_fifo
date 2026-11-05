@@ -1,0 +1,4 @@
+bind fifo fifo_cdc_protocol_checks i_fifo_cdc_protocol_checks(
+
+);
+

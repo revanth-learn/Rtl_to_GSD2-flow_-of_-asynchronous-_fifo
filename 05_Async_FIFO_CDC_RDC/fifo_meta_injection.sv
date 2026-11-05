@@ -1,0 +1,790 @@
+`resetall
+`timescale 1 fs/1 fs
+
+module msi_fifo_u_sync_rd2wr_clx_ptr_clx_r;
+
+parameter time TSETUP = 1;
+parameter time THOLD = 1;
+
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+JABkO31fhNS9R2FrhIcDh3McJ+R1biZkL5Uf1zkdJ1XcTacYizunPhjejLnocHVE
+WO8ZhJe4aR1HUGBzKC7OjR2pa/jtBIBScUv9LYcz3D/JEKW12QvUUPHytrPl85t6
+by3r3UWdY034q5XqtNA0jRQaH2xnkdujgJlKHzDGdbcf10b8bsoQLgESUNxF3HYt
+QXqDj8yxU3OAKxG8NiM0RW4Zbnt5FJ+izN1vECYlagFQ88UhBe3TBct+2ejZ/8wO
+2JBdIM/ECdfFWEZ21+6yT/d+WHsZI3MKtEibl/7nucBbx9DuR+hJDq4zHjDYUwuV
+dkCbqMlpATE2cIKWZ9OvFg==
+//pragma protect end_key_block
+//pragma protect digest_block
+GepUm1uVJgJ6DcY5Qmw8A2FSw6o=
+//pragma protect end_digest_block
+//pragma protect data_block
+8GoLzQMuIkQNtFUnOP01bGwSKBrrCXd+K594/S7Nzw/2HHy+9ph0gzk2phrNU6Yi
+3hz+KUq7HBFJCRZ/M+TdeBSKDR1kjAsG6VGsrbv+hqa08we6BvdjiGldEhbpbgV4
+CZrC523nQnw8V9QAPDfGtB9XvyCOYXI8A1L1PQNVJM/tdcZsreMCin2sDUCFycsy
+UEY9H4FTAKmS52XiwSX7vmVvUgnKi8LCYxh0a1TI4gGVPab1rbc94cviPwoCiL1F
+XkCL/rsIfKVW65GE3aZ1c4B4L7gZY1Xl+JrUggIzXmOelb6cOFkytsWSgJvFsB9v
+lO4pK26FdLf3K6aa3JrG2ZeSP8Z8lvPNEALPrnFtMocK8IZ4kndV23pxZIlx1Aay
+GSDGf3X8HmBW4OxRJUEU4NFlRqscIBdDWcJly+Rw1jWj6seWluPVb+6zoL76tB56
+pt6Dngb7DH+vmZi5p5bOgfrdMD2oDmcxPFe9C6/eH5zyR1902exBtA2eSfiQWj3s
+uwiCNy6Hkucj9wrWtuIlww==
+//pragma protect end_data_block
+//pragma protect digest_block
+zLf3mXGVY1NuFqnRK3GSZVn1n9g=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+wire _setup_timing_violation;
+wire _hold_timing_violation;
+wire _setup_inj_en = 1'b1;
+wire _hold_inj_en = 1'b1;
+wire en_n4 = fifo.u_sync_rd2wr_clx.i_rst_n & _setup_inj_en & ~_setup_timing_violation & ~_hold_timing_violation;
+wire en_n5 = fifo.u_sync_rd2wr_clx.i_rst_n & _hold_inj_en & ~_setup_timing_violation & ~_hold_timing_violation;
+
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+gtar4TwloQjYzwaE9sF6d7dJswKgvEf+54DCS9dknaxf5Rp0M0MOzaavv2A/0PED
+/HqGWVafjyJXOOuxzfkvP6VRGdOVdkZEx+bDcrNCZow/Pya+Rpbgrl+jgjhW48Rt
+4Hs+7rtBbSQKpG/Za7m5E894Lyo4XHu6Fa1/9LnrMFjEXa3wmENPmb49/3DBgfGl
+BpUXM74DqZzTDsswqhxF9nbGWMSuAbmbBoumaCjyeUpyMKC879LHgmo2Tit2OXEa
+ftQrOk9wkJoqXlmQ1ijRZuZcmUjaWtjsEMSarVnk1nL8yR1yCDYEBLQzVG77qY85
+q2rVLPitRxoQ2K1Gmagz+Q==
+//pragma protect end_key_block
+//pragma protect digest_block
+AJUBIvWMRu4bDbKEf+6BPZ4EdqE=
+//pragma protect end_digest_block
+//pragma protect data_block
+L7U/O3C7wzFgkcbat8PphecPHz2FmlThIb1U0GlCDgTsAgffcti4sk40Y9s/Cjsm
+JBjkThAj0bONY/SD37clBqkXQ1cv2na9wlzNY9i9wAlph5vKnY/2ZZRx9V3jwGdA
+8ZR5r+z0KxQ8VIhK7qnCcrSc50uFzaUn9dzyfukC7Ksy4NtcNM0k6foDPnENl+/E
+EgLpaXSmPdOhbjDJsnrOquYx0WQGkPki8VqjYKBwq/3nNRL+skWJbHNEJsu4uHfM
+HvVAaixcIXg865gQb5hRClf37XwPEePTwU8N0nmWMPbDMLnWdn9XOe5lonQX5J+B
+fGDNWay2fW6hheF5wdim+VYRslKtytHKUXRpJU2EuEENQh+3x8SzbdEvOlZjjxUu
+1KtTxYBHpFkrrUD3HP4nFthzYizGDTMDakteN/zy+8tz2Ffk+O6wgT5hey0BRzk/
+S4OYYZdFEYDPmj8EiFL9UMNfkFLviwNXEdpIaQCFY/Jo2RCvGfVQx8xq0UXXQCYW
+j938YccVL4Wm1cV+RPdZhFENwoEQWLxid3pkNJ8PlAEP3ZbzynrLCsBwWAojYP44
+1PguyGGMjbnV7/FbakgMnZAgPFcbZeEumYdnrm9VUKw=
+//pragma protect end_data_block
+//pragma protect digest_block
+ad+cPm4o7FmwifkFBbfkTpZl8r0=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+msi_setup_fifo_u_sync_rd2wr_clx_ptr_clx_r #(.TW(TSETUP)) i_msi_setup_fifo_u_sync_rd2wr_clx_ptr_clx_r(.*);
+msi_hold_fifo_u_sync_rd2wr_clx_ptr_clx_r #(.TW(THOLD)) i_msi_hold_fifo_u_sync_rd2wr_clx_ptr_clx_r(.*);
+
+endmodule
+
+
+module msi_setup_fifo_u_sync_rd2wr_clx_ptr_clx_r (
+_o_rd_ptr_n10, _i_ptr_n2, _ptr_clx_r_n1, clk_n0, en_n4, _setup_timing_violation
+);
+
+parameter time TW = 1;
+
+input [4:0] _o_rd_ptr_n10 ;
+input [4:0] _i_ptr_n2 ;
+input [4:0] _ptr_clx_r_n1 ;
+input clk_n0;
+input en_n4;
+output _setup_timing_violation;
+
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+biC/AFIVqksKB7wgwOM9OnuEtF45zmhGhv+jr54M9PitxHf1r1C5CwqwGic7Gol3
+GVKF6E8ZoiAOhlO9tq+Bn99CrIePfTT/iusPdG0vXmZsJe9PaK5EuUf4zy45UpE8
+83vX1u/W7HO6G0CTyuFuCX4VY42fmPDqlgj2SqFNYb6kmNY4F7cAiFfzkrmJx5ej
+kC398oeehMzx2SnHY8aqs/gAapZvdrvKoKy7pTOsy1fjBhUTt+lX2DX6B1gvjYQf
+cJ8pcclXTLGCysvpnEsiQAt2V1FZozIePdeKcXEvY58iTFO1RS/oBwkdlLYvDtYp
+XtXjsNtZUWWWO9su6nC/bQ==
+//pragma protect end_key_block
+//pragma protect digest_block
+Z5hZtuFLllvkgXlT8zgCWi5P/fE=
+//pragma protect end_digest_block
+//pragma protect data_block
+NZdxDsT9a5uOM3uRe3P55d07RuGe1VcFsf0JnNgcVtrZ53STHsK8Huzn+wawrpMb
+fdenlDRFquxmEr0/hXbOTY21mu6lfCdIwPUz8EupV2uCExA0/gsdkMWhzICxkMgn
+KY66HVL60CP7ukGi0i4yqCxahHv05sFG5I5p6eijd40wY23ZxQrZzpl6O0g6X0Bo
+MmbXD/9XmaUtPVVEYzZntUZ1QUwMOaaAUviqZco9SkV1xaErBNvfdgWYImQV6x33
+XhP7AfnR5oIaHkA7ikOb3cN0Ooi/6xE0X1KEG9AI93/T0b7e5ZV5Jw8m7FKM6hz9
+2f6m9nX5NAlax68XdJzvy2JXvioFKqPBOdNLXVREWIgxZrhyCVkNJO+6ycc8ZSV4
+fuSoDERzkusFDBlNHKsHs/pxriLxu7GdA31FWkR4uoWhAzFaNbCzP8IwC01mIEyG
+gOQUbHgRNbRn//h1gZ6nLg2cnB3re0IoDj/wQWW70xDgk80sf7dpmFWX3Dfd/2uM
+w3bHjAjXlN1Iz/DFWJqrLKcfyK9nyXJwHw8JkepZGyKfOvQSbe+oJRw30RYoWdnW
+yFvqR6NVKCqlObfbT5KA9Nb6VucbWcJ4tPdsLRpy8xGjepCfpL0b6dGKEIM/uFtq
+1JAvKHXEaTvp3uMiALrtOMboDRyfdgkf/+axBK+xhdgnIeT/EHVj+0CaABLGDdSb
+t2KDgN01T2MrkJNSRimDFJjjR9NW4XgcAaRgwZqbGh+Uj0ZnYwinPzVaPBSvCiXK
+8ikBlYHQLNNKlelidyYIOtMQZS+MsQZnn0CA/oDA5ftjOzC+KqLCPOdpqVLv3oJK
+CLX/2f1XlKfgzuMODF0cmBGXF9Xd0oc0hXdTdKrDEVocCIeXB0V86FCM080NavKZ
+q4I5hHClBnkvrkXa4MqAo5qwTWEv3wxMVcbMqUDMHSiws7sE8einF6jw2PPmPH0n
+9hkx3znDzaqjpADFEaXg40/jKh4eXIXIjNq2ydx9/76VSDby/Bj1aTztwmRDktYK
+x98bJ7HS2G7ZT5u//hyI6t83dNncsh+a6SeSIj7dnL2/TJoOnpGxieVOKusv6zLV
+N9+5BnrS3e+3LRbwQiJqh35/5p99ZJILUj6cyJ7iFUG5yzF+6+GQADUF4Btmnykk
+//pragma protect end_data_block
+//pragma protect digest_block
+aqvXcsLppQo1Zv0YJJ/X7B1Wf8M=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+check_setup_violation #(.WIDTH(5), .TW(TW)) i_cs (
+.clk(clk_n0), .en(en_n4), .data(data_n22), .regular_value(regular_value_n23), .meta_value(meta_value_n24), .timing_violation(_setup_timing_violation)
+);
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+bqSDldrf3/zdsrX2rLGn817qIs4Ilpd8nh24XRMRMVNdsdZv7SKvq7t+B2uUvooQ
+4GZsTfvqliVyH5ipbL4qArueRFqqHA+MuBUTG+U70P2oNXXmMrZyunDAyF/FMhYy
+mIEz8/ComgzlOakPF3Bh6V3vtN1ktde2b8wXF5nO3AOPcNrgK5afvxlLK7i8dUFT
+D6C+Kli8wir9gre+whx0OBqG7uUittX3kNJBm54dIxiLDCexdHzFRmHUasrq1vG6
+KQ9Bpppl4CDWy5xbEGm//QW0PscKHnr66Faps+otv+ClWTkDRyC3IlWANbYZIZf4
+6L3WFS4idtPfO3nUUwhbCQ==
+//pragma protect end_key_block
+//pragma protect digest_block
+hw5q+9FwB20oTlsvggPHgX9qnSE=
+//pragma protect end_digest_block
+//pragma protect data_block
+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
+zRDojS2nNyM6/X1oFIautg==
+//pragma protect end_data_block
+//pragma protect digest_block
+mVRup+D8spAVKucstS3rkgDS+yw=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+
+endmodule
+
+
+
+module msi_hold_fifo_u_sync_rd2wr_clx_ptr_clx_r (
+_o_rd_ptr_n10, _i_ptr_n2, _ptr_clx_r_n1, clk_n0, en_n5, _hold_timing_violation
+);
+
+parameter time TW = 1;
+
+input [4:0] _o_rd_ptr_n10 ;
+input [4:0] _i_ptr_n2 ;
+input [4:0] _ptr_clx_r_n1 ;
+input clk_n0;
+input en_n5;
+output _hold_timing_violation;
+
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+a8CSaLro2zsspVA18xJy2DuyozOW+JtzmVKvCFpkq7mLWi60wSVjiros3E9uRCuV
+WkzPUtC5ZRuWzmsftOpAHdYaA9RqtJIaNqCyPSN63WUm4UygJ6J4I6e3j53adiJ0
+LwIEigfr+2FTTVzkKXamQTOVqxB8T2MZQ5hOU7gR3TVxhvrsd5zdtFkq4rA1v5ih
+1+09/xATBoU5ZObFl+3d4rB5IwzY7nQtQG3mCXbp59o7iUJT+nK3PVoVZBIvdIVm
+U8ZH6T6AyHOlGDR2TnMKW0YqDrf7xGmbstaFH7yBuxIC8/oVXvFv7wmQuoDMlUnI
+coFDip2U96AHmMtjPukd0Q==
+//pragma protect end_key_block
+//pragma protect digest_block
+riIMNX8Qz56sh5RYdZKlkeg1Pmc=
+//pragma protect end_digest_block
+//pragma protect data_block
+meC44qdSbxsK9vXK/jvr6Lenorr2B2t+t8fKtv0cbWSc/GF0+MjRof5qpeB1/pxD
+tjgYtZK0e/j6YNf2Re8u+ZZH6GbPlTyEB57oozlboyFaspHdZt/PTDUGKH1cBjIH
+QJGgP+xVnTtYekqL3iskL00GtPili30YHGvTJzB6NZ9gKcg6sFerBCDFuyTd0xTc
+2wxXW0dT31LwJQX1q3/ZSv7fLq97UxNcWfnvorFlnnyUveCAqt0+nu8AQewmKmP3
+I1jAvVOGllSTdIa5WyeaPEWrCtmD2s7Py6isJGuC8O6JR2fPfPRC0onPQCZPF4MW
+kyOQNVajswSIyg2xucTeOHznzWSpV70gUidJbDuoZRi8h7hAVB9rHUEGRikK2jSS
+EuCUctSuYNJkVFuOiFEi1mxvnLmsyMw+R1xVqWTbCiYGLed4m6LaKtPYZL2/xAmV
+Bg9L5zUoia9hQ0aO9IFvX0eueAe3vk+ER+lSh/utjBp+bn9Joptva4phJYfcKX1T
+yS+khTqS2jJS4kYT10mJ6PIgkKToCD6HAlzAKj1rFDAN7xx7IDKzqF3sOyeuI7Wo
+mNcR+s+SVaxz2FpjKggNFyv01m/1AkordEY8o2IjaBJeRQVC+1WbMtKZwlHPlb5W
+hX+4mz8pTo0AeaVzB4g116QJgXgO+2LhJDZijPCU6VX/IR0eQ4+8PCE3/ckoyxHW
+mV4cyvJV6EiL7lUEx5/+8xfE2FM+uWmFkGIH/eafhYX23I5RIP7c5dnaKkRGekhQ
+64vuQcClGgWq0pfQS9/RCKrvzH+458Hivz1gr6HLDvY5PH/VB3unCgfRQqv7SzLn
+22XQcXTFR7YvSz2lfM/sAqyGKk5+wKZpd5Wp35SBeC3XFrQXpPzeD3geBdTmVNpz
+NJac6dya+2qsPZBynguMPdm+h6aNT19OxHe8cC1oIJ+WfX8T2ULxCb8LGWa9MCAm
+2LAzYUwH/P7Lvq+gOP2r+s5YYMajy5V8AtbgZiY6NCCIfAC+8GzPixS2hg1LjYJB
+PuLbRkhnbiix/G7Btwv8mgYJKUpCgYHNGNTDCw1Nd82HtLS+RoJsW2vgAsa5Nkt0
+WmQEeqh0czJ6ov9AKZbD6lZelq7pIgNrkP9rI3GylyLu9B+ZU0tTe4pu+1y85OWB
+//pragma protect end_data_block
+//pragma protect digest_block
+ALinsxX1PwLQf4BkHMipYrkxbVA=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+check_hold_violation #(.WIDTH(5), .TW(TW)) i_ch (
+.clk(clk_n0), .en(en_n5), .data(data_n25), .regular_value(regular_value_n26), .meta_value(meta_value_n27), .timing_violation(_hold_timing_violation)
+);
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+UgleB/Ldhz05ztFWSde4uM8mWFT+3cpC7sa4X4GI4moS3N9PaUGntgjWTa/TJep9
+b4GyTBbHKYBtvloUJ2WYq4PSzQRHY1FlppZxHcSS/iPSJLoftDoDy605EY3oaHv3
+9v9/vxAG3oz+73qUr+XZpfRqqCW+/J2/6NNQkVXUnk6yeaTU8XL3OpR6XB1Y8x7L
+qL9E0sjHxWiJWNqLHNrSDl96Q023CLfdtIg83OOmwj0F259LPsV9CkAbtVQxg/7e
+cNPFpr78tG3xas6xMEb2/HrJBpiyAgsWnBQx47DrUBiq70s7s4Ju62ZepESYiYk0
+Yo4v7BCcr/qSfR4S0D2V+Q==
+//pragma protect end_key_block
+//pragma protect digest_block
+vMmvA631S5UF9ukp70i04zDo5yw=
+//pragma protect end_digest_block
+//pragma protect data_block
+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
+gEX+11afm9n3+/8LFtsF7Q==
+//pragma protect end_data_block
+//pragma protect digest_block
+zW04YHRquYHbTGxlTSJxLph+7iY=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+
+endmodule
+
+
+
+
+module msi_fifo_u_sync_wr2rd_clx_ptr_clx_r;
+
+parameter time TSETUP = 1;
+parameter time THOLD = 1;
+
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+I6YwReaOW/l3F6PpXQGtvMHoK3U8C6cIKCjomhk+YECRZtUz0jqTCjqn2K2x1CzV
+8sP3MrHNqzgExWDvgVi6IZIB7SDILGpzfJB1hzyf4TuomIvxF0bvV+62orL6p/pT
+ZGz92m1jepLjsPnedxxHkcGWkUJDVQnulKxvX0WbT2PgIIHE5iVuIj/8Pwn00mgZ
+9hS+yU0eeKhinF20HwZ04Do7qsqQ1V7dIdneKu/vcOGdzRVwx9FPsuMVevKkeTUK
+apoCX5ly/j/1+DxS7Km47n0odL/NYLoKlm48tivhGfW56KIz+JgD7b0BlF8cwSye
++pgqX2gXYuf7eYk0V+n1Iw==
+//pragma protect end_key_block
+//pragma protect digest_block
+yLy5o50N8aTsdVapqY+ARpYqYJk=
+//pragma protect end_digest_block
+//pragma protect data_block
+UXSmdx4h8FsKyST6Yx1oPMxODNGXwTOl9QbbyoqrqALfwDl3yKDeaGWIGYzBXFRj
+7rf+W4ojnvYVY1hK8SKzWcEq08P9coIxB+ihztpO97nD+2EJd8zSav/KsIcyKSZL
+FrHjY/4LIJM6AGruPVyEckuUxkZU52rtzMOFLvbkznxG8hqRrbqsZZSx2zr7WiJh
+ODEV0s4zd+ApTZ5uMxNdzgoNoQf98AU3amuACZZy9EE1Gqj4QYtwyThLFMH1xn0K
+f+n+hbijSne8J4RTvBudB3uISKijnufMHe9wG7KVpQNVOogEI3o6285rqC6GGGQV
+U13pA/I5Je+yX+tJGLhIssoV0tZL7BgcZcgJSlhcHh4Dw8NjmHrVypOciJbenDUJ
+VDFFHBbI5KY9jycjVdfOVuKZXS/4Rkcprvntxa2l/36YLhZ+lUDwrXvPoBfG6D06
+ZJwSzuGczR9BdNlfrem2XGHjDmax51f4ph+4g72Gxp51DwCy0i11MAbiAmxl/S25
+6VK5QcHrtczgP9psBxWebA==
+//pragma protect end_data_block
+//pragma protect digest_block
+A0dhjYK56z5maOMA17EsRdKUrPQ=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+wire _setup_timing_violation;
+wire _hold_timing_violation;
+wire _setup_inj_en = 1'b1;
+wire _hold_inj_en = 1'b1;
+wire en_n15 = fifo.u_sync_wr2rd_clx.i_rst_n & _setup_inj_en & ~_setup_timing_violation & ~_hold_timing_violation;
+wire en_n16 = fifo.u_sync_wr2rd_clx.i_rst_n & _hold_inj_en & ~_setup_timing_violation & ~_hold_timing_violation;
+
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+MvG4KfFiof9qRcTz+xUIRt8nAyW0sziipZnmFbT7kYb3Fj8Cb+Du7wohwyz6YXdY
+F5b4a89tSj0nus7VYetXvdYcGqh2n3egDIZWhGokddfzqCWKV8gI20FzNmd7k/aR
+1RsynsLqK2rNKzOIXDX6Caf9dM9uEKTOvQGkVzfqXWlbeZxaaiG5mP8UXuTck8j2
+PKXxyQGHhUgZqFtVVKzEEexIL85MDk0YCCF3Ci8ALjvCNUHCVOC0XJJtdqb5wbNj
+aevaMCzl1be0L6Xj0lxLgHGkeXfygf2lfz0hknNVZGK9cqdLVStHBmFGtsV6feki
+2TEwTxi7ZdA9nsd/cXycfw==
+//pragma protect end_key_block
+//pragma protect digest_block
+Jfw/qXaAhLwThx3HyIijixtQWLY=
+//pragma protect end_digest_block
+//pragma protect data_block
+ZVhwxXJpzhpaA3cSAkYCoIFkQBno/6B+xgVgRS+Uiq9Tc5mMoC7HwN+OcKORMEQk
+hl+w6fXrxWZAP3VbRV1KZ9qcVeLStTJm42Lu/1sjWD0XqiuTm+VcUEE+g2uLAF+H
+hsiVz/0thsRpqvTipbM6tbP8NtHkhpa2Iho/0Tv1xn/B85FKf2RMenOZCJ5IMR1w
+mZnIJ1vCMRbvd75HK/heD2WE3D4eo19gPM1Rwr0ghfttjNBwACyPAmkgd6fRhDrP
+JNSFDOz+PPWBBPkcQByWaY+k2z2hKNVPgCrgJGI1wi8E8quGfibEuaTwo2kK1eGO
+3Xtax82a7vojqySrITnQ/oTAOFZOmwfUetQ86UeUTjTaCcIyCR9TMTcYtsweewmg
+k+JGvCHg9PW09yH40M7xWouh0YTqB3a2hdjU3lpfLbiH1WScSwjjVyXUh3hUyCGh
+ZkyxGJUaWRoYrBs/4nxe3nn/kaCVJtDyWyk6KZktEqtqYm3N4Yciox5Q2B/BgQtW
+RQivg6uD1pZ75Vh/bHhgeCvofKSJSI3PVVrcBKg1TDYskOR575UQrj4D1IstcKol
+GIXH2+54SMzSF7KDeS8GCk3xu0yj1qLe4g1pJNM0z0o=
+//pragma protect end_data_block
+//pragma protect digest_block
+zWjA9H3+QIC62HxqkEXHZJkhNfg=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+msi_setup_fifo_u_sync_wr2rd_clx_ptr_clx_r #(.TW(TSETUP)) i_msi_setup_fifo_u_sync_wr2rd_clx_ptr_clx_r(.*);
+msi_hold_fifo_u_sync_wr2rd_clx_ptr_clx_r #(.TW(THOLD)) i_msi_hold_fifo_u_sync_wr2rd_clx_ptr_clx_r(.*);
+
+endmodule
+
+
+module msi_setup_fifo_u_sync_wr2rd_clx_ptr_clx_r (
+_o_wr_ptr_n21, _i_ptr_n13, _ptr_clx_r_n12, clk_n11, en_n15, _setup_timing_violation
+);
+
+parameter time TW = 1;
+
+input [4:0] _o_wr_ptr_n21 ;
+input [4:0] _i_ptr_n13 ;
+input [4:0] _ptr_clx_r_n12 ;
+input clk_n11;
+input en_n15;
+output _setup_timing_violation;
+
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+o1qSV86lCykWZ+6xgQzuwrxCA7xJANnCYejnMWlzCkZHCankS+JlbYK2ALNT+yKY
+GIpxbD1vTcoBTI4TXYuEGX8XDlj/Tb2LXMzxh9H74WiWRstBbZvihgzghVGrQDjK
+IkD8r6ag0elFEEja3FcKtPT5LeC0ECYEpWVyEjmAI0UxRvYa2KO1cQ0WSw12moBR
+G6Orb5sRwPCRz8rAAMjup7P6x43yNa7MoPt2ApAiYclsSb9rvmyyv32iUM0QTIl6
+50+e0yuiCz4h0fwXrMenrGH4KEWaFwGVwV6T8Le2aR2/d5vj9uVG1eB44dKIYjMa
+LUWW0YvtyJ7Vg+8TQqj7lA==
+//pragma protect end_key_block
+//pragma protect digest_block
+x+AMDwoAf6IjMthw9JtABtt9H1E=
+//pragma protect end_digest_block
+//pragma protect data_block
+PXZ0cwAcZFcEScCrw3868V70bkDos/k/3muW5p5nPMzHFpLT8SKrSzkrwK2KrCFs
+D5TKpxzVoBkOQVC/Dib384IZSHuK33sgjpK0YiNcik3VXlhyunCC4qei8AF9YNHP
+r5VgA2U4d5gNKgh6yInzzvGdJ21PD/xb194e7Eybsx5+RA7+fsvfnyv4cQrazMAk
+yI7UKXENXygEoAdHk6Esk5KGn2uE7ZRTHVXwN4yls09NIFN68u68CpznMYYynUPH
+YnD2Fkqc21oxfjWIvVDTpFeiimNHph23wUGynN6n5SH8JaZ0LHz2Xn0DCmBLi41W
+zr35sn8zhqyAht3dN2FUpDfa9Yn+p1k6NzzDytmp1xxe6M00tCPW8tyN76uRAWLo
+Ou/jlgfe+UAuWwhZUMHUKpZMeGJBYyHlVjA5oBijoCKFNvD0qCNCuFYVnER+wLM2
+Ot0YMFD2dbPPg6Od8AWA9QThR65Z1+lOg6i+G/+DjRLV/aTb2XwAHYiXpKqCfdwF
+uYn6IvLM4/3bu3xUgPV1H8af7O+ff1XgF5oC1SmA55JtjsG526XulSmub5HKjr+x
+mRsTnJLVqDfi78eB+TgicilnrMdvN0LsaUG2AevJuayWXCml4NLPFHbp/cYCpRHL
+rGakuYEwrLookEDegA6W0rwjsMWpB2ggEAJhCJ0g9wO6pmyFCTa6aWk7tKWzd3A0
+mkzotai0MxiIQ89fYxN3MSL58Qkbv3YVS2D+KEqxMthcfVdFFe+dfLZwJQb3PJBh
+BjLqYCnenezqNVc6QXdc7iNQAjcNdbV6HHIOQv3dwU+lq6tZZAmHYVG9CjXABb+h
+E9cprrApUroObknhCSjrLUB9ugC1K26QPbgXPIM3UXlf154NdbdJH7wkY0U1VWgY
+l4++fr8Dt2v3TpPG9NTKvQeXNFTCpjm8F5kjCGlfm0taOi+A+mK0WlvK+3YhHNuq
+rETDswQj4jQTzZcPv6fyuB2uxTdhjdR9pC6juvlw65Pz49tnH9RU7dPdfjEOdebv
+uZUDsX198E2k02KAbWM4eeGX/t2GI9Ub52gxH7DZccEv2C8GS8Hyy7axiG0pqQap
++Y3g5m3VH/4HQF857EGbZ6yONdDppGIVyBlX8ad+BQKpqeejhubHeLDEhTg9hCQp
+W9p7lYgt1v++mRv66093jA==
+//pragma protect end_data_block
+//pragma protect digest_block
+BicZLoKBvlNOgrxz7oOL/+3j1xk=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+check_setup_violation #(.WIDTH(5), .TW(TW)) i_cs (
+.clk(clk_n11), .en(en_n15), .data(data_n28), .regular_value(regular_value_n29), .meta_value(meta_value_n30), .timing_violation(_setup_timing_violation)
+);
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+WAtWpgzLB9RyhABnwlVQeT13s+Pijze8C8X7qFzG0B5ubwqKE7zlHw4FTH3ZO+BL
+nlJYBUFVbiZxtTxAqamNrHeFlaNigJPlrTyfNjyH+oeu3q7OXiBGkrsJp0Gjh48v
+TIZqcDaUNywoX8FC1tsOEHepEumgCRK+SGbHvBW1myUqWgIiR3cx/F/R5k6iPMrK
+EFTkwIW2szFFse6x1siyF4QOq7b5AFfu3GHu4IcknIsXCQzcXMwREcdOCExKbAI+
+3IfQmcYxLiX5VbKe03zHJUCFIFE7/u9+ZOUS1V/HuhGKSpDI4j0kWrQw4z4f8iTw
+MlEyKgW0z+vX6g3kVW48xw==
+//pragma protect end_key_block
+//pragma protect digest_block
+9Pk3NKR7HoezEDULSVYAFBiKwag=
+//pragma protect end_digest_block
+//pragma protect data_block
+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
+TdwPyKP/+JNEho9a0Q0AfQ==
+//pragma protect end_data_block
+//pragma protect digest_block
+db27hnFM19XzZSk47PryBVYKGDc=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+
+endmodule
+
+
+
+module msi_hold_fifo_u_sync_wr2rd_clx_ptr_clx_r (
+_o_wr_ptr_n21, _i_ptr_n13, _ptr_clx_r_n12, clk_n11, en_n16, _hold_timing_violation
+);
+
+parameter time TW = 1;
+
+input [4:0] _o_wr_ptr_n21 ;
+input [4:0] _i_ptr_n13 ;
+input [4:0] _ptr_clx_r_n12 ;
+input clk_n11;
+input en_n16;
+output _hold_timing_violation;
+
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+GL7TRYT4Boga88tjQw7or4vngs6F5/4aG58xF3qxP9x8tDh8BHDtA4YR6VrGp//u
+a63swsvC24fMwgBvsbzJo4vmTvozWPBwDc1X6/ENc9BSRt6kq2F8G+LuvifxheHj
+2AeU1SBxRnSniVPLRC5k6KM/sS38ccU/sNUTAnoFfzdGi5vxTpozEajzwu5GwYnA
+vSmYbDEhaPIKkp3FhDrmcH5s1Oq5Qat2AVPrLHWf+R4vXMffVKUQ+xY/f6oACaGS
+oRkxmBK6m0Uao54EI7yukJvtLqf3ICqqND6A5t5lBdvOrLCRVSttithimcNWgoPQ
+2cQoRUQG7lJI43oWFFSSCA==
+//pragma protect end_key_block
+//pragma protect digest_block
+lIGNSpU22rLY2g0WL4fvj8QT6eQ=
+//pragma protect end_digest_block
+//pragma protect data_block
+wJ+dtDML0oPGdhkOfJB1a+uJNWee/fgTHQwkxUhzi+oiB3eg8jWvQ6XhtUuLjoN3
+soSfV0N0uZhmQH6aEjNRT1aiTNmclLg9tRw0azcDKiG5qNdJGXfi/Dfw2dAex6JN
+53KKJ6Fo6mdFfIwCNYHBrEGg18scVcqf+thiMrnRiTtLeIL+IJlowM9ghezZRMEc
+PPQQH006x20v/eZZfpDq2LSb2KzAuM1cFr9y5s2N8OPt+Sl4xEczCK/nqMRkuRun
+/FIFymnPpCZoxqjcG6I1Z0K60Qp0xkKXLgUfoX+REx5YqJJyfUkQZQkcaPYL7gpm
+Tk8cHV//232vc4XJ6Zq8cURa51akdjuE397JC/sc2TAY6E+/ahdq3TUb8rMio6xJ
+ZQYZZeWof/wEGXHnl2DWXZV8GPGX4oxnF4kn9vBukuc2df821Cb+UhF5vp/XGY8r
+v5902zOy5kA96u1gWz88oSkLDz2tXKbZcDILIFbEHIvFJd9WG8Zn9LJ+JKguddv8
+3hPlxZPovz2eoON5ULvHVVKlmkOxHx4CohmG+nuLzPP9wijhNrPHS51YyGMR9SYU
+uUjnfwCNBXuxqxf4aD4MT6hOQdhb6o918ynSnHrXbEjgEVukTntGUoyU9fIw01Fy
+aZ27cbenvxo+UxbThABTTR54JaMCzbuNkI37v5DZaB8NQOkqY6Z0T0bxBHwHwir2
+ONKDIfGnMiWyDHj30DtgZvq0BTIJAKf2Ua5qXaeAhh0ONBDbtmsHyogaOhJdATLC
+3eRdaO8++bCJG80gyl26J0TsOZxnb9Dus9/+8Cjs/hhCR+ToQXVZ//YtrV+LQ11D
+XDiBFTj6uS5kkE1al5nCGN6+KROyDmLa8EC6GzQSbeNv8ZKgoL+RQOX0YSQu4CZa
+DVpDMhbp7s6WOT+0f3UV/VnaW1SEPFq2kU40uT7tUV7rbwOiY9vCqaZIMjsRtvbq
+Ium5uHu60p0TfsKsWnnQ47Vah+YHUXK3Sb7Kvakq9QBOfiNZep7qL0hIkjVlXoGi
+eM5bEyBr63pywX6QHu/qAawvviky9Nxv18S1m00NMmFS7/oE1qKnNvEWlt+yiZZW
+V4Uuqdt4RwsBygGEkP86pb0DpoPXaqOIGab2ZvXNWbatjHyM90pglm7Lli2BbhQ1
+hlLUikHrcZ7Tjyh4sSngiQ==
+//pragma protect end_data_block
+//pragma protect digest_block
+W7V4ad+ye6ZKqTj7mYeozRjoQu4=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+check_hold_violation #(.WIDTH(5), .TW(TW)) i_ch (
+.clk(clk_n11), .en(en_n16), .data(data_n31), .regular_value(regular_value_n32), .meta_value(meta_value_n33), .timing_violation(_hold_timing_violation)
+);
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+eqODjX7ZG5jfSdEACD0YByY9c+685LP/wxhzmfD+1MM18WLvoEKafhwcYrhqZDhR
+NEMFjHFzLzV2smskTDghG01M/wFQjIb8O77K6rjvSsSDJk8zY+oJIfps/elEkwDL
+ofAuFEkjnldoKanuL7Z4oTazD6QhL4N6DeAvr+BxotZ5QIllDjubqrY9suQenqn4
+9uWMXqq4VMx2XSBIvfkm+TyrPfy/wuarrwNBqex9AeOU0DF42RCBgaDZLKfDCRpV
+pPnQhOIO2hCzCQLKwhKKNUkV2Z6Uz+OCRr2CgbEU2Y0Ww4PO8Qd4WeYl3J68A476
+xwfzf+H6u7r69VwkzuAH2Q==
+//pragma protect end_key_block
+//pragma protect digest_block
+J5fowF5tpV6QP7+B2jMoYX61IB0=
+//pragma protect end_digest_block
+//pragma protect data_block
+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
+Sp65Zg8R4bindsTUxWp4ZQ==
+//pragma protect end_data_block
+//pragma protect digest_block
+Qe9cLVfkLCSHjL/PNStfevIt2Sc=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+
+endmodule
+
+
+
+
+module fifo_meta_injection #(
+parameter real TSETUP_i_wr_clk = 1e-06,
+parameter real THOLD_i_wr_clk = 1e-06,
+parameter real TSETUP_i_rd_clk = 1e-06,
+parameter real THOLD_i_rd_clk = 1e-06
+) ();
+
+msi_fifo_u_sync_rd2wr_clx_ptr_clx_r #(.TSETUP(1e+15*TSETUP_i_wr_clk), .THOLD(1e+15*THOLD_i_wr_clk)) i_msi_fifo_u_sync_rd2wr_clx_ptr_clx_r(.*);
+msi_fifo_u_sync_wr2rd_clx_ptr_clx_r #(.TSETUP(1e+15*TSETUP_i_rd_clk), .THOLD(1e+15*THOLD_i_rd_clk)) i_msi_fifo_u_sync_wr2rd_clx_ptr_clx_r(.*);
+
+string bind_instance;
+
+
+`ifndef CDNS_MSI_ENCRYPT_DEBUG
+//pragma protect begin_protected
+//pragma protect encrypt_agent="NCPROTECT"
+//pragma protect encrypt_agent_info="Encrypted using API"
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=prv(CDS_RSA_KEY_VER_1)
+//pragma protect key_method=RSA
+//pragma protect key_block
+Zhg9euEOwFzFJkWaWX8tL7A94ozpAi8pWAi+nPAkvcTYThGCMJG3nIlvdPvYGRzM
+Ar0BIPtTumi48zIA2i/OZ1EpMyw6OvhZ12f1ZjFyKfx1dJ7ehr7fL5wEMSDTOKnI
+xkYwT7+vRct5Eiqj/qOzFHVf14rx579y5+EBZHsI+hI/mqv2jM/KuIipuIBTXZg9
+qLMGEXfzFl/tkl1ej6fH3ICiB1u/UInI2+6VZFKohcMWi+rWE5uK4l0Fkq+G9HBF
+6v9IFAeWoM+KzfjoA17brzFSMMinPnumHXQnBgS35oXIdvR+NtYgEIYCewxnXdme
+ymS84bJW5O3RbY5LrV65sw==
+//pragma protect end_key_block
+//pragma protect digest_block
+x9wuxSG4cw5Ud+QHBZXzYnJHBh8=
+//pragma protect end_digest_block
+//pragma protect data_block
+3COryXm53cK7i+wAXn6h1Z0hCkkgDaFSw4/tSuuqn3eLIkqWhcw+MODG2wvtqPFR
+23glrfZWDFaVF6tJnqXx2dQTQIWdDDqDv/vSXLNbnm49GRWxjrW+heUFn+tyr5A8
+M6LtomqVukmRXYC6E5cWA/rqzH8VmGydwjJ3bftid2fKQ3PkOtfR8KzWzL3ZClVW
+0M9ECagUBPshTLwxZ55xgLHEfwthuzhTJC69ajTKMXNwDCVhuAT4qBAXQQnspTc7
+0opAR/Q2SgkeNSslIyIW8pHoNw+uY0jXTfwUtE5cDSb9P3Om6XSMrUveM7Y+Rjno
+e+T7QbzputRJYFBlKAZVQWTApk6t8rQeWNMW0kh9xFIsZ8SypXKnXqhfJJerWxaq
+q9U9hgqaYtjqpFUkCHCJaZ69yLnXLgLVDPdbC1tzc/UdqcGbhTGf3KLhPrK4z7Yd
+f+QCoq5rpaJwkPO0M81wrDITvn6nSFPhrcp/5cS2bJn4xY84S1mj1HYpQAyxMM6L
+pDE/4z4/TPQoc72fKobeH3leT70X6rI7Mdy1n7Eq6GSCq081nYAoY1pUNnP3DqaE
+TUTsO5TWArh9rMKKiV9Scg==
+//pragma protect end_data_block
+//pragma protect digest_block
+GGv27jvcgZUvsBTGDjd7yS/3Vq0=
+//pragma protect end_digest_block
+//pragma protect end_protected
+`endif
+
+endmodule
+
+
+

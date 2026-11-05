@@ -1,0 +1,51 @@
+2026-09-30 14:34:54.208558 (764) main____ INFO    ----------------------------------------
+2026-09-30 14:34:54.208760 (764) main____ INFO    JasperGold version info
+2026-09-30 14:34:54.208790 (764) main____ INFO      tool      : JasperGold 2019.09
+2026-09-30 14:34:54.208810 (764) main____ INFO      version   : 2019.09p002 64 bits
+2026-09-30 14:34:54.208823 (764) main____ INFO      build date: 2019.11.26 18:17:27 PST
+2026-09-30 14:34:54.208833 (764) main____ INFO    ----------------------------------------
+2026-09-30 14:34:54.208843 (764) main____ INFO    Runtime info:
+2026-09-30 14:34:54.208855 (764) main____ INFO      platform  : Linux 3.10.0-1160.119.1.el7.x86_64 x86_64
+2026-09-30 14:34:54.208871 (764) main____ INFO      hostname  : nsdcs.iiti.ac.in
+2026-09-30 14:34:54.208882 (764) main____ INFO      pid       : 764
+2026-09-30 14:34:54.208892 (764) main____ INFO      arguments : '-style' 'windows' '-cdc' 'script_cdc.tcl'
+2026-09-30 14:34:54.208902 (764) main____ INFO    ----------------------------------------
+2026-09-30 14:34:54.208912 (764) main____ INFO    System resource limits info:
+2026-09-30 14:34:54.208923 (764) main____ INFO      virtual memory: unlimited
+2026-09-30 14:34:54.208934 (764) main____ INFO      cpu time      : unlimited
+2026-09-30 14:34:54.208958 (764) main____ INFO      stack size    : 8388608 B
+2026-09-30 14:34:54.208975 (764) main____ INFO      core file size: 0 B
+2026-09-30 14:34:54.208993 (764) main____ INFO      open files    : 1024
+2026-09-30 14:34:54.209005 (764) main____ INFO      file size     : unlimited
+2026-09-30 14:34:54.209014 (764) main____ INFO    ----------------------------------------
+2026-09-30 14:34:54.209023 (764) main____ INFO    Memory statistics:
+2026-09-30 14:34:54.209033 (764) main____ INFO      total physical memory  : 131759196 kB
+2026-09-30 14:34:54.209042 (764) main____ INFO      free physical memory   : 92061248 kB
+2026-09-30 14:34:54.209051 (764) main____ INFO      committed address space: 62115868 kB
+2026-09-30 14:34:54.209059 (764) main____ INFO    ----------------------------------------
+2026-09-30 14:34:54.209124 (764) main____ INFO    Important environment variables:
+2026-09-30 14:34:54.209150 (764) main____ INFO      CDS_LIC_FILE   : '5280@14.139.1.126'
+2026-09-30 14:34:54.209166 (764) main____ INFO      DISPLAY        : ':16.0'
+2026-09-30 14:34:54.209179 (764) main____ INFO      EDITOR         : 'gedit'
+2026-09-30 14:34:54.209193 (764) main____ INFO      LM_LICENSE_FILE: '5280@14.139.1.126'
+2026-09-30 14:34:54.209202 (764) main____ INFO    ----------------------------------------
+2026-09-30 14:34:54.209571 (764) lic_core INFO    Initializing license system ...
+2026-09-30 14:34:54.210530 (764) lic_core INFO    ... license system initialized.
+2026-09-30 14:34:54.213354 (764) lic__man INFO    Claim 'main' for <ui>.
+2026-09-30 14:34:54.213451 (764) lic_core INFO    (1) checking out 'jasper_interactive' ...
+2026-09-30 14:34:55.131991 (764) lic_core INFO    ... (1) checkout succeeded
+2026-09-30 14:34:55.132179 (764) lic__man INFO    Claim 'cdc' for <ui>.
+2026-09-30 14:34:55.132231 (764) lic_core INFO    (2) checking out 'jasper_cdc' ...
+2026-09-30 14:34:56.829995 (764) lic_core INFO    ... (2) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
+2026-09-30 14:34:56.830084 (764) lic_core INFO    (3) checking out 'jasper_dao' ...
+2026-09-30 14:34:58.288096 (764) lic_core INFO    ... (3) checkout succeeded
+2026-09-30 14:34:58.982144 (764) lic__man INFO    Claim 'cdc' for <ui>.
+2026-09-30 14:34:59.383819 (764) lic__man INFO    Unclaim 'cdc' for <ui>.
+2026-09-30 14:34:59.383865 (764) lic__man INFO    Claim 'cdc' for <ui>.
+2026-09-30 14:34:59.387666 (764) session_ INFO    Starting analysis session with session id 'session_0' (launcher: <local>) ...
+2026-09-30 14:34:59.389901 (764) session_ INFO    Analysis session with session id 'session_0' started (pid: 831)
+2026-09-30 14:35:02.826163 (764) session_ INFO    Analysis session 'session_0' connected to the console (host: 127.0.0.1:40360)
+2026-09-30 14:35:51.287090 (764) lic__man INFO    Claim 'cdc' for 'session_0'.
+2026-09-30 14:36:26.313912 (764) main____ INFO    About to exit: requested from GUI
+2026-09-30 14:36:26.921455 (764) session_ INFO    Analysis session 'session_0' disconnected.
+2026-09-30 14:36:26.927093 (764) main____ INFO    Exiting with status 0.

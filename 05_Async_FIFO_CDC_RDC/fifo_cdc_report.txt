@@ -1,0 +1,50 @@
+==============================================
+  JasperGold - CDC Violation/Property Report  
+==============================================
+
+---[ <Report Information> ]---------------
+------------------------------------------
+ Num  | module | created date             
+------------------------------------------
+[1]     fifo     Sep 30 12:26:11 IST 2026 
+
+
+********************************************************************************************
+
+VIOLATIONS SUMMARY
+---[ <Domain: CDC> ]----------------------------------------------
+------------------------------------------------------------------
+ Num  | Category        | Error | Warning | Info | Waived | Total 
+------------------------------------------------------------------
+[1]     CDC_CONVERGENCE   0       0         0      5        5     
+[2]     CDC_FUNCTIONAL    0       0         0      2        2     
+[3]     Total             0       0         0      7        7     
+
+---[ <CDC_CONVERGENCE> ]-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Num  | Severity                                                                                                                                           | Tag                | Message                                                                                                                                          | Source Location | Instance-Module         | Grouping Status 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[1]     Waived (o_rd_data is assigned asynchronously)                                                                                                        CDC_ST_CONV_CONV     "Two or more signals converge at o_rd_data in destination clock domain jg_i_rd_clk after synchronization"                                                            fifo-fifo                 -               
+[2]     Waived (Empty and Full flags involve synchronized read/write pointers that normally
+converge into comparators for Empty and Full flag calculation)   CDC_ST_CONV_RECONV   "Two or more bits of u_fifo_empty.o_rd_ptr signal converge at u_fifo_full.o_full in destination clock domain jg_i_wr_clk after synchronization"                      u_fifo_full-fifo_full     -               
+[3]     Waived (Empty and Full flags involve synchronized read/write pointers that normally
+converge into comparators for Empty and Full flag calculation)   CDC_ST_CONV_RECONV   "Two or more bits of u_fifo_empty.o_rd_ptr signal converge at u_fifo_full.full_r in destination clock domain jg_i_wr_clk after synchronization"                      u_fifo_full-fifo_full     -               
+[4]     Waived (Empty and Full flags involve synchronized read/write pointers that normally
+converge into comparators for Empty and Full flag calculation)   CDC_ST_CONV_RECONV   "Two or more bits of u_fifo_full.o_wr_ptr signal converge at u_fifo_empty.o_empty in destination clock domain jg_i_rd_clk after synchronization"                     u_fifo_empty-fifo_empty   -               
+[5]     Waived (Empty and Full flags involve synchronized read/write pointers that normally
+converge into comparators for Empty and Full flag calculation)   CDC_ST_CONV_RECONV   "Two or more bits of u_fifo_full.o_wr_ptr signal converge at u_fifo_empty.empty_r in destination clock domain jg_i_rd_clk after synchronization"                     u_fifo_empty-fifo_empty   -               
+
+---[ <CDC_FUNCTIONAL> ]-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Num  | Severity                                                | Tag                    | Message                                                                                                                                    | Source Location | Instance-Module               | Grouping Status 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[1]     Waived (output of sync_ptr_clx module have NDFF Scheme)   CDC_PC_FUNC_CTRLSTABLE   "Clock domain crossing signal u_sync_wr2rd_clx.i_ptr is not stable long enough to be captured correctly in destination domain jg_i_rd_clk"                     u_sync_wr2rd_clx-sync_ptr_clx   -               
+[2]     Waived (output of sync_ptr_clx module have NDFF Scheme)   CDC_PC_FUNC_CTRLSTABLE   "Clock domain crossing signal u_sync_rd2wr_clx.i_ptr is not stable long enough to be captured correctly in destination domain jg_i_wr_clk"                     u_sync_rd2wr_clx-sync_ptr_clx   -               
+
+
+
+********************************************************************************************
+
+
+
+[JasperGold 2019.09] [Platform Linux] [Version 2019.09p002 64 bits] [Build date 2019.11.26 18:17:27 PST]
