@@ -1,0 +1,3 @@
+s1(29Sep2026:08:38:27):  xrun ../01_Async_FIFO_src/fifo_mem.v ../01_Async_FIFO_src/fifo_full.v 
+s2(29Sep2026:08:43:05):  xrun ../01_Async_FIFO_src/fifo_mem.v ../01_Async_FIFO_src/fifo_full.v 
+s3(29Sep2026:08:47:02):  xrun ../01_Async_FIFO_src/fifo_mem.v ../01_Async_FIFO_src/fifo_full.v ../01_Async_FIFO_src/fifo_empty.v ../01_Async_FIFO_src/reset_sync.v ../01_Async_FIFO_src/sync_ptr_clk.v ../02_Async_FIFO_tb/fifo_tb.v -access +rwc -gui 

@@ -1,0 +1,13 @@
+xrun(64): 20.09-s012: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s012: Started on Sep 29, 2026 at 08:47:02 IST
+xrun
+	../01_Async_FIFO_src/fifo_mem.v
+	../01_Async_FIFO_src/fifo_full.v
+	../01_Async_FIFO_src/fifo_empty.v
+	../01_Async_FIFO_src/reset_sync.v
+	../01_Async_FIFO_src/sync_ptr_clk.v
+	../02_Async_FIFO_tb/fifo_tb.v
+	-access +rwc
+	-gui
+xrun: *E,FILEMIS: Cannot find the provided file ../01_Async_FIFO_src/sync_ptr_clk.v.
+TOOL:	xrun(64)	20.09-s012: Exiting on Sep 29, 2026 at 08:47:02 IST  (total: 00:00:00)
